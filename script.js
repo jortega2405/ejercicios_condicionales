@@ -1,6 +1,6 @@
 //Ejercicios Condicionales
 
-let ejercicio_uno = (num, total) => {
+const ejercicio_uno = (num, total) => {
     let descuento;
   if (num >= 3) {
        descuento = total - (total * 0.3);
@@ -15,7 +15,7 @@ console.log(ejercicio_uno(3,100000));
 
 /****************************/
 
-let ejercicio_dos = (x, total) => {
+const ejercicio_dos = (x, total) => {
     let descuento;
     if (x < 74) {
         descuento = (total*0.15);
@@ -27,11 +27,29 @@ let ejercicio_dos = (x, total) => {
 console.log(ejercicio_dos(74, 100))
 
 /****************************/
-
-let ejercicio_tres = (monto) =>{
+//haciendo uso del operador ternario
+const ejercicio_tres = (monto) =>{
     let resultado = monto <= 50000 ? (monto * 0.03) : (monto * 0.02);
     console.log(` Cliente cuenta con un monto de $${monto}
     \n por lo que se le debe pagar al cliente el valor de $${resultado}`);
 }
 ejercicio_tres(60000);
+
+/****************************/
+
+
+const ejercicio_cuatro = (promedio, ganancias_diarias) => {
+    if(promedio > 170){
+        return `Tendrá que parar su producción por una semana y recibira una multa de ${ganancias_diarias / 2}.
+        \n En total se perderán $${ganancias_diarias * 5} sumado a $${ganancias_diarias / 2} que equivalen a la multa de
+        \n para un total de $${(ganancias_diarias * 5) + (ganancias_diarias / 2)}
+        `;
+    }else{
+        return `No tendrá sanción ni multa por lo que no tendrá perdidas`;
+    }
+};
+console.log(ejercicio_cuatro(200, 1000000))
+
+/****************************/
+
 
