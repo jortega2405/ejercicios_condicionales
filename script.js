@@ -51,5 +51,18 @@ const ejercicio_cuatro = (promedio, ganancias_diarias) => {
 console.log(ejercicio_cuatro(200, 1000000))
 
 /****************************/
+//Teniendo en cuenta que la tasa de devaluacion no la tenemos, tomamos esta como parametro de entrada y debe ser negativa
+const ejercicio_cinco = (valor, tasa_devaluacion_auto, tasa_crecimiento_casa) => {
+    const incremento = (((valor * tasa_crecimiento_casa)* tasa_crecimiento_casa) * tasa_crecimiento_casa);
+    const devaluacion = (((valor * tasa_devaluacion_auto)* tasa_devaluacion_auto) * tasa_devaluacion_auto) * -1;
+    if(devaluacion < (incremento / 2)){
+        return `Debería comprar el Automovil`
+    }else{
+        return `No debe comprar el automovil`
+    }
+};
+console.log(ejercicio_cinco(5000, -0.5, 0.9)) // recuerda La tasa de devaluacion debe ser negativa
+
+/****************************/
 
 
