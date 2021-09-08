@@ -97,7 +97,30 @@ const ejercicio_siete = (valor_sin_iva, marca) => {
 console.log(ejercicio_siete(2000, 'nosy'))
 
 /****************************/
+const ejercicio_ocho = (total_compra) => {
+    let cantidad_invertir;
+    let valor_prestado = 0;
+    let valor_credito;
 
+    if(total_compra > 500000){
+        cantidad_invertir = total_compra * 0.55;
+        valor_prestado = total_compra * 0.3;
+        valor_credito = total_compra * 0.15;
+    }else{
+        cantidad_invertir = total_compra * 0.7;
+        valor_credito = total_compra * 0.3;
+    }
+    let interes = valor_credito * 0.2;
 
+    return `Valor total de la compra: ${total_compra} \n
+    Cantidad a invertir: ${cantidad_invertir} \n
+    Valor del prestamo: ${valor_prestado} \n
+    Valor del credito: ${valor_credito} \n
+    Intereses: ${interes}
+    `;
+};
+console.log(ejercicio_ocho(400000))
+
+/****************************/
 
 
