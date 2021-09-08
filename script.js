@@ -65,4 +65,24 @@ console.log(ejercicio_cinco(5000, -0.5, 0.9)) // recuerda La tasa de devaluacion
 
 /****************************/
 
+const ejercicio_seis = (numero_computadoras) => {
+    const valor_total = numero_computadoras * 11000;
+    if(numero_computadoras < 5){
+        let descuento = valor_total * 0.1;
+        return `Su descuento será de $${descuento}, debe pagar $${valor_total - descuento}`; 
+    }else if(numero_computadoras >= 5 && numero_computadoras < 10){
+        let descuento = valor_total * 0.2;
+        return `Su descuento será de $${descuento}, debe pagar $${valor_total - descuento}`; 
+    }else{
+        let descuento = valor_total * 0.4;
+        return `Su descuento será de $${descuento}, debe pagar $${valor_total - descuento}`; 
+    }
+};
+console.log(ejercicio_seis(11))
+
+/****************************/
+
+
+
+
 
