@@ -28,3 +28,10 @@ console.log(ejercicio_dos(74, 100))
 
 /****************************/
 
+let ejercicio_tres = (monto) =>{
+    let resultado = monto <= 50000 ? (monto * 0.03) : (monto * 0.02);
+    console.log(` Cliente cuenta con un monto de $${monto}
+    \n por lo que se le debe pagar al cliente el valor de $${resultado}`);
+}
+ejercicio_tres(60000);
+
