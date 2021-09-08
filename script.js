@@ -123,4 +123,15 @@ console.log(ejercicio_ocho(400000))
 
 /****************************/
 
+const ejercicio_nueve = (numero1, numero2) => {
+    if(numero1 === numero2) {
+        return numero1 * numero2;
+    }else if(numero1 > numero2) {
+        return numero1 - numero2;
+    }else{
+        return numero1 + numero2;
+    }
+};
+console.log(ejercicio_nueve(1, 2))
 
+/****************************/
