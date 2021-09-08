@@ -135,3 +135,19 @@ const ejercicio_nueve = (numero1, numero2) => {
 console.log(ejercicio_nueve(1, 2))
 
 /****************************/
+
+const ejercicio_diez = (numero1, numero2, numero3) => {
+    if(numero1 > numero2 && numero1 >numero3) {
+        return numero1;
+    }
+    if(numero2 > numero1 && numero2 > numero3) {
+        return numero2;
+    }
+    if(numero3 > numero1 && numero3 > numero2){
+        return numero3;
+    }
+    if( numero1 === numero2 || numero1 === numero3 || numero2 === numero3){
+        return `Los numeros son iguales`
+    }
+};
+console.log(ejercicio_diez(7, 7.5 ,5))
