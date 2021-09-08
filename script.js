@@ -82,6 +82,21 @@ console.log(ejercicio_seis(11))
 
 /****************************/
 
+const ejercicio_siete = (valor_sin_iva, marca) => {
+    let descuento = 0;
+    marca = marca.toUpperCase();
+    if(marca === 'NOSY'){
+        descuento += valor_sin_iva * 0.05;
+    }
+    if(valor_sin_iva >= 2000) {
+        descuento += valor_sin_iva * 0.1;
+    }
+    const valor = (valor_sin_iva - descuento)* 1.16;
+    return `Debe pagar $${valor}`
+};
+console.log(ejercicio_siete(2000, 'nosy'))
+
+/****************************/
 
 
 
